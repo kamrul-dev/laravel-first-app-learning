@@ -18,6 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//routes --> web.php
+Route::get('/test', function () {
+    app()->make('first_service_helper');
+    return view('welcome');
+});
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
