@@ -35,6 +35,10 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            // add router service provider: app --> Providers --> RouterServiceProvider
+            Route::middleware('web')
+                ->group(base_path('routes/amar.php'));
         });
     }
 }
