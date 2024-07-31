@@ -25,6 +25,12 @@ Route::get('/test', function () {
     return view('welcome');
 });
 
+//route for facades
+Route::get('/testone', function () {
+    CustomFacadeTest::Test();
+
+});
+
 
 
 

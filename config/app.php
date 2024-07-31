@@ -169,6 +169,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\ExampleProvider::class,
+        App\Providers\CustomServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,6 +185,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'CustomFacadeTest'=> App\Repositories\Test::class,
+
     ])->toArray(),
 
 ];
