@@ -31,6 +31,15 @@ Route::get('/testone', function () {
 
 });
 
+// routing implement for about and contact page
+Route::get('/about', function () {
+    return view('/about');
+});
+
+Route::get('/contact', function () {
+    return view('/contact');
+});
+
 
 
 
