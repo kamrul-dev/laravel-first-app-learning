@@ -49,6 +49,12 @@ Route::get('/contact', function () {
 
 });
 
+// route parameter
+Route::get('/routparameter/{id}', function ($id) {
+    // return 'This is my route parameter id = ' .$id;
+    return "This is my route parameter = $id";
+});
+
 
 
 

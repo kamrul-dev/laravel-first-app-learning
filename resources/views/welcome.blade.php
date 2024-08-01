@@ -37,6 +37,7 @@
                 <ul>
                     <li><a href="{{url('about')}}">about</a></li>
                     <li><a href="{{url('contact')}}">contact</a></li>
+                    <li><a href="{{url('routparameter')}}">route parameter</a></li>
                 </ul>
             </div>
         </div>
