@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // dd(app());
     return view('welcome');
 });
 
@@ -66,6 +67,19 @@ Route::get('/contact-this-is-named-parameter', function () {
 Route::get(md5('/parametermd5hashing-afsd33d'), function () {
     return view('/contact');
 })->name('contact.us.md5');
+
+
+// add middleware in coutry route
+Route::get('/country', function () {
+    return view('/country');
+})->middleware('country');
+
+
+
+
+
+
+
 
 
 Route::get('/dashboard', function () {
