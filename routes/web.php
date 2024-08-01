@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Example\FirstController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -76,9 +77,8 @@ Route::get('/country', function () {
 
 
 
-
-
-
+// view route with controller:  req -> route -> Controller -> return view -> response
+Route::get('/withController-ddd', [FirstController::class,'index'])->name('withController.us');
 
 
 
