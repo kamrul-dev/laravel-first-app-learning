@@ -42,6 +42,13 @@ Route::get('/contact', function () {
     return view('/contact');
 });
 
+//redirect one rout to another if router not present : when click contact route it will go to about route
+Route::get('/contact', function () {
+    // return view('/contact');
+    return redirect ('/about');
+
+});
+
 
 
 
