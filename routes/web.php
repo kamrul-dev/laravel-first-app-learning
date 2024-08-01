@@ -38,6 +38,10 @@ Route::get('/testone', function () {
 
 Route::view('/about','about');
 
+// Route::get('/about', function () {
+//     return view('/about');
+// });
+
 Route::get('/contact', function () {
     return view('/contact');
 });
@@ -55,7 +59,13 @@ Route::get('/routparameter/{id}', function ($id) {
     return "This is my route parameter = $id";
 });
 
+Route::get('/contact-this-is-named-parameter', function () {
+    return view('/contact');
+})->name('contact.us');
 
+Route::get(md5('/parametermd5hashing-afsd33d'), function () {
+    return view('/contact');
+})->name('contact.us.md5');
 
 
 Route::get('/dashboard', function () {

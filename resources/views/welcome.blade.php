@@ -35,9 +35,11 @@
             <div>
               
                 <ul>
-                    <li><a href="{{url('about')}}">about</a></li>
-                    <li><a href="{{url('contact')}}">contact</a></li>
-                    <li><a href="{{url('routparameter')}}">route parameter</a></li>
+                    <li><a href="{{URL('about')}}">about</a></li>
+                    <li><a href="{{URL::to('contact')}}">contact</a></li>
+                    <li><a href="{{url::to('routparameter')}}">route parameter</a></li>
+                    <li><a href="{{route('contact.us')}}">named parameter</a></li>
+                    <li><a href="{{route('contact.us.md5')}}">md5 hashing parameter</a></li>
                 </ul>
             </div>
         </div>
