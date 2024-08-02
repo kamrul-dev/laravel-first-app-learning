@@ -41,6 +41,7 @@
                     <li><a href="{{route('contact.us')}}">named parameter</a></li>
                     <li><a href="{{route('contact.us.md5')}}">md5 hashing parameter</a></li>
                     <li><a href="{{route('withController.us')}}">View with Controller</a></li>
+                    <li><a href="{{url('testInvoke')}}">Invokable Controller</a></li>
 
                 </ul>
             </div>

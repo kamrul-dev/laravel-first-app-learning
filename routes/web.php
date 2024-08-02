@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Example\FirstController;
+use App\Http\Controllers\InvokController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -75,6 +76,9 @@ Route::get('/country', function () {
     return view('/country');
 })->middleware('country');
 
+
+//__Invokable Route__//
+Route::get('/testInvoke', InvokController::class);
 
 
 // view route with controller:  req -> route -> Controller -> return view -> response
