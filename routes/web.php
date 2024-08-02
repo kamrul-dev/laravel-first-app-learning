@@ -72,9 +72,9 @@ Route::get(md5('/parametermd5hashing-afsd33d'), function () {
 
 
 // add middleware in coutry route
-Route::get('/country', function () {
-    return view('/country');
-})->middleware('country');
+// Route::get('/country', function () {
+//     return view('/country');
+// })->middleware('country');
 
 
 //__Invokable Route__//
@@ -83,6 +83,10 @@ Route::get('/testInvoke', InvokController::class);
 
 // view route with controller:  req -> route -> Controller -> return view -> response
 Route::get('/withController-ddd', [FirstController::class,'index'])->name('withController.us');
+
+
+// Controller Middleware
+Route::get('/country', [FirstController::class,'country'])->name('country.us')->middleware('country');
 
 
 

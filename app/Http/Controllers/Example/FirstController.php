@@ -10,4 +10,10 @@ class FirstController extends Controller
     public function index(){
         return view('withcontroller');
     }
+
+    public function country(){
+        return view('country');
+    }
+
+
 }
