@@ -50,11 +50,11 @@ Route::get('/contact', function () {
 });
 
 //redirect one rout to another if router not present : when click contact route it will go to about route
-Route::get('/contact', function () {
-    // return view('/contact');
-    return redirect ('/about');
+// Route::get('/contact', function () {
+//     // return view('/contact');
+//     return redirect ('/about');
 
-});
+// });
 
 // route parameter
 Route::get('/routparameter/{id}', function ($id) {
@@ -88,6 +88,9 @@ Route::get('/withController-ddd', [FirstController::class,'index'])->name('withC
 // Controller Middleware
 Route::get('/country', [FirstController::class,'country'])->name('country.us')->middleware('country');
 
+
+// CSRF token used
+Route::post('/student/store', [FirstController::class,'Studentstore'])->name('student.store');
 
 
 Route::get('/dashboard', function () {
