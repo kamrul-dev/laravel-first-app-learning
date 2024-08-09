@@ -16,8 +16,18 @@ class FirstController extends Controller
         return view('country');
     }
     public function Studentstore(Request $request){
-        // return view('student.store');
-        dd($request->all());
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+
+        // dd($data);
+
+        // store to database
+        
+        // After store the database redirect it
+        return redirect()->route('contact.us');
+
+        // return redirect('dashboard')->with('status', 'Profile updated!');
     }
 
 
