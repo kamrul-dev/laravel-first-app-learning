@@ -30,5 +30,9 @@ class FirstController extends Controller
         // return redirect('dashboard')->with('status', 'Profile updated!');
     }
 
+    public function viewlaravel(){
+        return view('laravelview');
+    }
+
 
 }

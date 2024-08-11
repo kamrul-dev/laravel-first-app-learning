@@ -43,6 +43,7 @@
                     <li><a href="{{route('withController.us')}}">View with Controller</a></li>
                     <li><a href="{{url('testInvoke')}}">Invokable Controller</a></li>
                     <li><a href="{{url('student.store')}}"> csrf token</a></li>
+                    <li><a href="{{route('laravel.view')}}">laravel view</a></li>
 
                 </ul>
             </div>
