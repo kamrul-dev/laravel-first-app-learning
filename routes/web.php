@@ -4,6 +4,7 @@ use App\Http\Controllers\Example\FirstController;
 use App\Http\Controllers\InvokController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,6 +95,17 @@ Route::post('/student/store', [FirstController::class,'Studentstore'])->name('st
 
 Route::get('/laravelview', [FirstController::class,'viewlaravel'])->name('laravel.view');
 
+Route::get('/testsession', function(Request $request){
+    $request->session()->put('age', '24');
+    // session(['name' => 'Kamrul_Session']);
+
+});
+
+Route::get('/all', function(Request $request){
+    return $request->session()->all();
+    // $request->session()->flush();
+
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -105,4 +117,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php'; 
