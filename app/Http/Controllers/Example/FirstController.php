@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class FirstController extends Controller
 {
     public function index(){
+        // abort(404);
         return view('withcontroller');
     }
 
@@ -31,6 +32,8 @@ class FirstController extends Controller
     }
 
     public function viewlaravel(){
+
+        abort(404);
         return view('laravelview');
     }
 
