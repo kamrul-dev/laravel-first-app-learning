@@ -93,6 +93,8 @@ Route::get('/country', [FirstController::class,'country'])->name('country.us')->
 // CSRF token used
 Route::post('/student/store', [FirstController::class,'Studentstore'])->name('student.store');
 
+Route::post('/store/contact', [FirstController::class,'store'])->name('store.contact');
+
 Route::get('/laravelview', [FirstController::class,'viewlaravel'])->name('laravel.view');
 
 Route::get('/testsession', function(Request $request){

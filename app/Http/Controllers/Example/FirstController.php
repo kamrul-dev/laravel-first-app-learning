@@ -35,4 +35,17 @@ class FirstController extends Controller
     }
 
 
+    //store contact
+    public function store(Request $request){
+        
+        $validated = $request->validate(rules: [
+            'name' => 'required|max:255',
+            'email' => 'required|unique:users|max:80',
+            'password' => 'required|min:6|max:12',
+        ]);
+
+        dd($request->all());
+    }
+
+
 }
