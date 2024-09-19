@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Example;
 
 use App\Http\Controllers\Controller;
+use Auth;
 use Illuminate\Http\Request;
+use Log;
 
 
 class FirstController extends Controller
@@ -33,7 +35,7 @@ class FirstController extends Controller
 
     public function viewlaravel(){
 
-        abort(404);
+        // abort(404);
         return view('laravelview');
     }
 
@@ -46,6 +48,15 @@ class FirstController extends Controller
             'email' => 'required|unique:users|max:80',
             'password' => 'required|min:6|max:12',
         ]);
+
+        // data insert in database
+        //insert by query
+        //stored record on log file
+
+        Log::channel('contactstore')->info('the contact from submitted by'.rand(1,30));  //.Auth::id()  will here instead of rand();
+
+        // return redirect()->back();
+
 
         dd($request->all());
     }

@@ -109,6 +109,15 @@ Route::get('/all', function(Request $request){
 
 });
 
+//print loginfo
+Route::get('/loginfo', function(Request $request){
+   Log::info('This is your age'.rand(1,30));
+
+//    return redirect()->to('/');
+
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
